@@ -86,6 +86,9 @@ imap <F1> <Esc>
 nmap K k
 vmap K k
 
+" Handy <ESC>
+imap jj <ESC>
+
 " Make line completion easer
 imap <C-l> <C-x><C-l>
 
@@ -112,8 +115,8 @@ nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
 
 " Tab Movement
-nmap <silent> <leader>g :tabprev<cr>
-nmap <silent> <leader>s :tabnext<cr>
+nmap <silent> <C-g> :tabprev<cr>
+nmap <silent> <C-f> :tabnext<cr>
 
 " Tabbing
 nmap <silent> <C-c> :q<cr>
