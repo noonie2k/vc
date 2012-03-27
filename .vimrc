@@ -18,6 +18,7 @@ Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/guns/xterm-color-table.vim.git'
 Bundle 'git://github.com/hallettj/jslint.vim.git'
+Bundle 'git://github.com/wincent/Command-T.git'
 
 filetype plugin indent on
 
