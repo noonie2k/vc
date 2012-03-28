@@ -44,3 +44,20 @@ Misc
 
 * `\ev` - Edit .vimrc
 * `jj` - `Esc` alias
+
+Stock Plugins
+------------
+
+* [Vundle](https://github.com/gmarik/vundle) - Vundle is a plugin managemer similar to Pathogen
+* [NERDTree](https://github.com/scrooloose/nerdtree) - A directory tree explorer for vim.
+* [NERDCommenter](https://github.com/scrooloose/nerdcommenter) - A powerful plugin for commenting code
+* [Fugitive](https://github.com/tpope/vim-fugitive) - An awesome Git wrapper
+* [Powerline](https://github.com/Lokaltog/vim-powerline) - A sexy new status line (Vim 7.3+)
+* [Snipmate](https://github.com/msanders/snipmate.vim) - Useful code snippets
+* [Snipmate Snippets](https://github.com/scrooloose/snipmate-snippets) - A collection of useful snippets in a bunch for a bunch of languages
+* [Align](https://github.com/tsaleh/vim-align) - Plugin that is useful for aligning text
+* [Surround](https://github.com/tpope/vim-surround) - Allows you to easily surround text with stuff like quotes and parenthesis
+* [Xterm Color Table](https://github.com/guns/xterm-color-table.vim) - Displays the colors availabe to vim, handy if you are editing your color scheme a lot
+* [jsLint](https://github.com/hallettj/jslint.vim) - Automatically checks your JavaScript for common coding errors and bad coding patterns
+* [Command-T](https://github.com/wincent/Command-T) - Amazing fuzzy file searching. 
+* [Rails](https://github.com/tpope/vim-rails) - Makes working in RoR projects a dream.
