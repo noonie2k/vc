@@ -20,6 +20,7 @@ Bundle 'git://github.com/guns/xterm-color-table.vim.git'
 Bundle 'git://github.com/hallettj/jslint.vim.git'
 Bundle 'git://github.com/wincent/Command-T.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
+Bundle 'git://github.com/kana/vim-smartinput.git'
 
 filetype plugin indent on
 
