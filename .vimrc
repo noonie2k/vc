@@ -128,8 +128,8 @@ nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
 
 " Tab Movement
-nmap <silent> <C-g> :tabprev<cr>
-nmap <silent> <C-f> :tabnext<cr>
+nmap <silent> <C-f> :tabprev<cr>
+nmap <silent> <C-d> :tabnext<cr>
 
 " Tabbing
 nmap <silent> <C-c> :q<cr>
@@ -144,6 +144,9 @@ noremap L $                             " Easy moving to end of line
 " Common Toggles
 nmap <silent> <leader>p :set invpaste<CR>    " Toggle paste mode
 nmap <silent> <leader>n :set invnumber<CR>   " Toggle line numbers
+
+" Ctag
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Folds
 nmap <space> za
