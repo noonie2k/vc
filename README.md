@@ -60,4 +60,8 @@ Stock Plugins
 * [Xterm Color Table](https://github.com/guns/xterm-color-table.vim) - Displays the colors availabe to vim, handy if you are editing your color scheme a lot
 * [jsLint](https://github.com/hallettj/jslint.vim) - Automatically checks your JavaScript for common coding errors and bad coding patterns
 * [Command-T](https://github.com/wincent/Command-T) - Amazing fuzzy file searching. 
+
+For Command-T to work you will need to have vim compiled with the ruby interpretor enabled and you will probably have to run `rake make` in the `$VIM/bundles/Command-T` directory.
+
 * [Rails](https://github.com/tpope/vim-rails) - Makes working in RoR projects a dream.
+* [Smart Input](https://github.com/kana/vim-smartinput) - A really nice tag autocompletor
