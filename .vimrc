@@ -172,7 +172,8 @@ nmap <leader>bu :BundleInstall!<cr>
 nmap <Leader>bc :BundleClean<cr>
 
 " dbtext
-source ~/sql.vim
+let FILEA=expand('~/sql.vim')
+if filereadable(FILEA) | exe "source " . FILEA | endif
 nmap <F5> :DBExecRangeSQL<CR>
 "}}}
 
