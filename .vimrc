@@ -21,6 +21,7 @@ Bundle 'git://github.com/hallettj/jslint.vim.git'
 Bundle 'git://github.com/wincent/Command-T.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/kana/vim-smartinput.git'
+Bundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 filetype plugin indent on
 
@@ -121,16 +122,9 @@ nmap <silent> <C-j> :wincmd j<cr>
 nmap <silent> <C-l> :wincmd l<cr>
 nmap <silent> <C-k> :wincmd k<cr>
 
-" Splitting
-nmap <silent> <leader>sh :split<CR>
-nmap <silent> <leader>sv :vsplit<CR>
-nmap <silent> <leader>hs :split<CR>
-nmap <silent> <leader>vs :vsplit<CR>
-nmap <silent> <leader>sc :close<CR>
-
 " Tab Movement
-nmap <silent> <C-f> :tabprev<cr>
-nmap <silent> <C-d> :tabnext<cr>
+nmap <silent> <C-d> :tabprev<cr>
+nmap <silent> <C-f> :tabnext<cr>
 
 " Tabbing
 nmap <silent> <C-c> :q<cr>
@@ -175,4 +169,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 nmap <Leader>bi :BundleInstall<CR>
 nmap <leader>bu :BundleInstall!<cr>
 nmap <Leader>bc :BundleClean<cr>
+
+" dbtext
+source ~/sql.vim
+nmap <F5> :DBExecRangeSQL<CR>
 "}}}
+
+
