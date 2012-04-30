@@ -22,7 +22,6 @@ Bundle 'git://github.com/wincent/Command-T.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/kana/vim-smartinput.git'
 Bundle 'git://github.com/vim-scripts/dbext.vim.git'
-Bundle 'git://github.com/mharju/vim-fiddle.git'
 
 filetype plugin indent on
 

@@ -28,10 +28,6 @@ Tab/Split Keys
 * `Ctrl+c` - Close current tab
 * `Ctrl+t` - Open new tab with `:e` active
 
-* `\sh` `\hs` - Horizontal Split
-* `\sv` `\vs` - Vertical Split
-* `\sc` - Close split
-
 Vundle
 --------
 
@@ -59,9 +55,12 @@ Stock Plugins
 * [Surround](https://github.com/tpope/vim-surround) - Allows you to easily surround text with stuff like quotes and parenthesis
 * [Xterm Color Table](https://github.com/guns/xterm-color-table.vim) - Displays the colors availabe to vim, handy if you are editing your color scheme a lot
 * [jsLint](https://github.com/hallettj/jslint.vim) - Automatically checks your JavaScript for common coding errors and bad coding patterns
+* [Rails](https://github.com/tpope/vim-rails) - Makes working in RoR projects a dream.
+* [Smart Input](https://github.com/kana/vim-smartinput) - A really nice tag autocompletor
 * [Command-T](https://github.com/wincent/Command-T) - Amazing fuzzy file searching. 
 
 For Command-T to work you will need to have vim compiled with the ruby interpretor enabled and you will probably have to run `rake make` in the `$VIM/bundles/Command-T` directory.
 
-* [Rails](https://github.com/tpope/vim-rails) - Makes working in RoR projects a dream.
-* [Smart Input](https://github.com/kana/vim-smartinput) - A really nice tag autocompletor
+* [DBExt](https://github.com/vim-scripts/dbext.vim.git) - Great tool for working with a database inside of vim.
+
+For DBExt you'll need to create an `sql.vim` that contains your DB connection info in your home directory (or edit the .vimrc to move it). 
