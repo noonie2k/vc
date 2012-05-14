@@ -22,6 +22,7 @@ Bundle 'git://github.com/wincent/Command-T.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/kana/vim-smartinput.git'
 Bundle 'git://github.com/vim-scripts/dbext.vim.git'
+Bundle 'git://github.com/majutsushi/tagbar.git'
 
 filetype plugin indent on
 
@@ -115,6 +116,12 @@ nmap <silent> <leader>ev :tabe ~/.vimrc<CR>
 " Make movement on wrapped lines a little more sane
 nmap j gj
 nmap k gk
+
+" Disable arrow keys
+inoremap <up> <nop>
+inoremap <left> <nop>
+inoremap <down> <nop>
+inoremap <right> <nop>
 
 " Split movement
 nmap <silent> <C-h> :wincmd h<cr>
