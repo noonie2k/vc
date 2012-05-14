@@ -5,9 +5,7 @@ Installation
 
 `cd vc`
 
-`./makeLinks` - This will create symlinks in your HOME dir and checkout the initial Vundle plugin for vim. Make sure you've removed your existing `.vimrc` and `.vim/`
-
-Open vim and type `\bu` or `:BundleInstall!` to install and update plugins.
+`./makeLinks` - This will create symlinks in your HOME dir and checkout the initial Vundle plugin for vim and then open vim and install the other bundles. Make sure you've removed your existing `.vimrc` and `.vim/`
 
 Key Mappings
 ------------
