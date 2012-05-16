@@ -23,6 +23,7 @@ Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/kana/vim-smartinput.git'
 Bundle 'git://github.com/vim-scripts/dbext.vim.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
+Bundle 'git://github.com/scrooloose/syntastic.git'
 
 filetype plugin indent on
 
@@ -166,6 +167,7 @@ endif
 
 " NERDTree
 nnoremap <leader>1 :NERDTreeToggle<CR>
+nnoremap <leader>2 :TagbarToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<cr>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change NERDTree directory to the root node
