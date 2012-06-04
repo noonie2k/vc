@@ -84,7 +84,7 @@ set matchtime=2     " How many tenths of a second to blink
 "}}}
 "{{{ Mouse
 set mousehide       " Hide mouse after chars are typed
-set mouse=a         " Mouse in all modes
+set mouse=nirc      " Mouse in all modes except Visual, I use that for copying to clipboard
 "}}}
 "{{{ Misc
 " Better complete options to speed it up
@@ -100,7 +100,6 @@ imap <F1> <ESC>
 " Remove doc lookup binding
 nmap K k
 vmap K k
-
 
 " Make line completion easer
 imap <C-l> <C-x><C-l>
@@ -136,17 +135,24 @@ nmap <silent> <C-f> :tabnext<cr>
 
 " Tabbing
 nmap <silent> <C-c> :q<cr>
-nmap <C-t> :tabnew<cr>:e 
+nmap <C-t> :ktabnew<cr>:e 
 
+" Select entire document
+nmap <silent> <leader>a ggVG<CR>
+" Capital Q repeats last macro
+nmap <silent> Q @@
+" Easy moving to start of line
+noremap H ^
+" Easy moving to end of line
+noremap L $
 
-nmap <silent> <leader>a ggVG<CR>        " Select entire document
-nmap <silent> Q @@                      " Capital Q repeats last macro
-noremap H ^                             " Easy moving to start of line
-noremap L $                             " Easy moving to end of line
-
-" Common Toggles
-nmap <silent> <leader>p :set invpaste<CR>    " Toggle paste mode
-nmap <silent> <leader>n :set invnumber<CR>   " Toggle line numbers
+" Common Toggles    
+" Toggle paste mode
+nmap <silent> <leader>p :set invpaste<CR>
+" Toggle line numbers
+nmap <silent> <leader>n :set invnumber<CR>
+" Toggle relative line numbers
+nmap <silent> <leader>nn :set invrelativenumber<CR>
 
 " Ctag
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -184,5 +190,3 @@ let FILEA=expand('~/sql.vim')
 if filereadable(FILEA) | exe "source " . FILEA | endif
 nmap <F5> :DBExecRangeSQL<CR>
 "}}}
-
-
