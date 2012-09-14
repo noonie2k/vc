@@ -14,7 +14,7 @@ IDE Stuff
 ---------
 
 * `\1` - NERDTree Toggle
-* `\2` - TagBar (eventually)
+* `\2` - TagBar
 * `\3` - NERDTree Find
 
 Tab/Split Keys
@@ -55,6 +55,16 @@ Stock Plugins
 * [jsLint](https://github.com/hallettj/jslint.vim) - Automatically checks your JavaScript for common coding errors and bad coding patterns
 * [Rails](https://github.com/tpope/vim-rails) - Makes working in RoR projects a dream.
 * [Smart Input](https://github.com/kana/vim-smartinput) - A really nice tag autocompletor
+* [Tagbar](https://github.com/majutsushi/tagbar) - Lets you see functions, methods, and properties in your current file and jump to them.
+* [Syntastic](https://github.com/scrooloose/syntastic) - Adds smart parenthesis/brackets and a few other syntax tweaks to your files
+* [Xdebug](https://github.com/ludovicPelle/vim-xdebug) - Allows for proper debugging php scripts
+* [Html Annoyance](https://github.com/tudorprodan/html_annoyance.vim) - Fixes a few annoyances when editing HTML, paricularly the underline of anchor tages when they span multiple lines
+* [JavaScript Syntax](https://github.com/jelera/vim-javascript-syntax) - Adds a few syntax tweaks to javascript files
+* [Node](https://github.com/guileen/vim-node) - Adds node keywords to javascript files
+* [Nodejs Complete](https://github.com/myhere/vim-nodejs-complete) - Adds better omnicomplete support for node js files
+* [Ack](https://github.com/mileszs/ack.vim) - Allows ack-grepping from inside vim
+* [Easy Motion](https://github.com/Lokaltog/vim-easymotion) - Better movement in vim files
+* [Color Schemes](https://github.com/flazz/vim-colorschemes) - Like a billion colorschemes
 * [Command-T](https://github.com/wincent/Command-T) - Amazing fuzzy file searching. 
 
 For Command-T to work you will need to have vim compiled with the ruby interpretor enabled and you will probably have to run `rake make` in the `$VIM/bundles/Command-T` directory.
