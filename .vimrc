@@ -24,14 +24,24 @@ Bundle 'git://github.com/kana/vim-smartinput.git'
 Bundle 'git://github.com/vim-scripts/dbext.vim.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/scrooloose/syntastic.git'
+Bundle 'git://github.com/ludovicPelle/vim-xdebug.git'
+Bundle 'git://github.com/tudorprodan/html_annoyance.vim.git'
+Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
+Bundle 'git://github.com/guileen/vim-node.git'
+Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+Bundle 'git://github.com/flazz/vim-colorschemes.git'
 
 filetype plugin indent on
 
+au BufNewFile,BufRead *.phtml set filetype=phtml
+au BufNewFile,BufRead *.smtp set filetype=phtml
 "}}}
 "{{{ Color Scheme
 set t_Co=256
 set background=dark
-colorscheme ir_black
+colorscheme wombat256jaredmod
 "}}}
 "{{{ Backups & Swap file dirs
 set backup
@@ -44,6 +54,10 @@ set nowrap          " Turn off wrapping
 set laststatus=2    " Always show status line
 set cmdheight=2     " Set command line height
 set encoding=utf-8  " Set font encoding
+set termencoding=utf-8
+set fileencoding=utf-8
+
+let g:Powerline_symbols='fancy'
 "}}}
 "{{{ Behaviours
 syntax enable       " Enable syntax highlighting
@@ -60,6 +74,7 @@ set foldmethod=marker
 set scrolloff=8     " Number of lines from the bottom to begin scrolling
 set sidescrolloff=15 " Number of cols from side to begin scrolling
 set sidescroll=1    " Number of cols to scroll at a time
+set diffopt+=iwhite
 "}}}
 "{{{ Text format
 set tabstop=4       " Make tabs 4 spaces
@@ -75,7 +90,7 @@ set smartcase       " Intelligent Case sensitive searching
 set incsearch       " Incremental search, matches while typing
 set hlsearch        " Highlight matches
 " Ignore for following file types when using wildmenu
-set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.git,.hg,.bzr,.sass-cache,*.class
+set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.git,.hg,.bzr,.sass-cache,*.class,htdocs/framework/**,public/images/**,public/audio/**,public/docs/**,public/software/**,public/flash/**
 set tags=./tags,tags; " Set ctags in current directory and then up
 "}}}
 "{{{ Visual
@@ -157,6 +172,9 @@ nmap <silent> <leader>nn :set invrelativenumber<CR>
 " Ctag
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Sudo make me a sandwhich
+cnoremap w!! %!sudo tee > /dev/null %<CR>
+
 " Folds
 nmap <space> za
 "}}}
@@ -188,5 +206,16 @@ nmap <Leader>bc :BundleClean<cr>
 " dbtext
 let FILEA=expand('~/sql.vim')
 if filereadable(FILEA) | exe "source " . FILEA | endif
-nmap <F5> :DBExecRangeSQL<CR>
+nnoremap <leader><F5> :DBExecRangeSQL<CR>
+let g:dbext_default_buffer_lines = 40
 "}}}
+"
+nnoremap A :call EndOfLine()<CR>a
+
+fu! EndOfLine()
+    normal $
+    if getline(".")[col(".")-1] == ';'
+        normal h
+    endif
+    normal a
+endfunction
