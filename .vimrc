@@ -26,7 +26,8 @@ Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/scrooloose/syntastic.git'
 Bundle 'git://github.com/ludovicPelle/vim-xdebug.git'
 Bundle 'git://github.com/tudorprodan/html_annoyance.vim.git'
-Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
+Bundle 'git://github.com/ehynds/vim-javascript-syntax.git'
+"Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
 Bundle 'git://github.com/guileen/vim-node.git'
 Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -218,4 +219,20 @@ fu! EndOfLine()
         normal h
     endif
     normal a
+endfunction
+
+imap <leader>; <esc>mzi<C-R>=AddSemicolon()<CR><esc>`za
+fun! AddSemicolon() "{{{
+    call AddCharEndOfLine(';')
+    return "\<End>"
+endfunction "}}}
+
+imap <leader>, <esc>mzi<C-R>=AddComma()<CR><esc>`za
+fun! AddComma() "{{{
+    call AddCharEndOfLine(',')
+    return "\<End>"
+endfunction "}}}
+
+fun! AddCharEndOfLine(char)
+  call setline(line('.'), substitute(getline('.'), '\s*$', a:char, ''))
 endfunction
