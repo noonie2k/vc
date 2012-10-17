@@ -35,8 +35,11 @@ Bundle 'git://github.com/flazz/vim-colorschemes.git'
 
 filetype plugin indent on
 
-au BufNewFile,BufRead *.phtml set filetype=phtml
-au BufNewFile,BufRead *.smtp set filetype=phtml
+augroup filetype_phtml
+    au BufNewFile,BufRead *.phtml set filetype=phtml
+    au BufNewFile,BufRead *.smtp set filetype=phtml
+augroup END
+
 "}}}
 "{{{ Color Scheme
 set t_Co=256
@@ -62,6 +65,7 @@ let g:Powerline_symbols='fancy'
 "{{{ Behaviours
 syntax enable       " Enable syntax highlighting
 set autoread        " Automatically reload changes if detected
+set wildmode=longest,list,full
 set wildmenu        " Turn on wild menu
 set hidden          " Change buffer without saving
 set history=768     " Number of things to remember in history
@@ -108,9 +112,10 @@ set complete=.,w,b,u,U,]
 "{{{ Bindings
 
 " Handy <ESC>
-imap jj <ESC>
-map <F1> <ESC>
-imap <F1> <ESC>
+inoremap jj <ESC>
+inoremap <esc> <nop>
+noremap <F1> <ESC>
+inoremap <F1> <ESC>
 
 " Remove doc lookup binding
 nmap K k
@@ -137,6 +142,10 @@ inoremap <up> <nop>
 inoremap <left> <nop>
 inoremap <down> <nop>
 inoremap <right> <nop>
+noremap <up> <nop>
+noremap <left> <nop>
+noremap <down> <nop>
+noremap <right> <nop>
 
 " Split movement
 nmap <silent> <C-h> :wincmd h<cr>
@@ -167,7 +176,7 @@ nmap <silent> <leader>p :set invpaste<CR>
 " Toggle line numbers
 nmap <silent> <leader>n :set invnumber<CR>
 " Toggle relative line numbers
-nmap <silent> <leader>nn :set invrelativenumber<CR>
+nmap <silent> <leader>r :set invrelativenumber<CR>
 
 " Ctag
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -176,7 +185,23 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 cnoremap w!! %!sudo tee > /dev/null %<CR>
 
 " Folds
-nmap <space> za
+nnoremap <space> za
+
+" Goes to the end of the line unless there is a semi-colon, if there is it
+" will insert the cursor just before it
+nnoremap A :call EndOfLine()<CR>a
+
+fu! EndOfLine()
+    normal $
+    if getline(".")[col(".")-1] == ';'
+        normal h
+    endif
+    normal a
+endfunction
+
+" Capitalize a word
+inoremap <c-u> <esc>viwU
+nnoremap <c-u> viwU
 "}}}
 "{{{ Auto Commands
 if has ("autocmd")
@@ -209,13 +234,9 @@ if filereadable(FILEA) | exe "source " . FILEA | endif
 nnoremap <leader><F5> :DBExecRangeSQL<CR>
 let g:dbext_default_buffer_lines = 40
 "}}}
-"
-nnoremap A :call EndOfLine()<CR>a
 
-fu! EndOfLine()
-    normal $
-    if getline(".")[col(".")-1] == ';'
-        normal h
-    endif
-    normal a
-endfunction
+"{{{ Abbreviations 
+iabbrev funciton function
+iabbrev funcion function
+iabbrev fucntion function
+"}}}
