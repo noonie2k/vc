@@ -5,7 +5,7 @@ Installation
 
 `cd vc`
 
-`./makeLinks` - This will create symlinks in your HOME dir and checkout the initial Vundle plugin for vim and then open vim and install the other bundles. Make sure you've removed your existing `.vimrc` and `.vim/`
+`./makeLinks` - This will create symlinks in your HOME dir and checkout the initial Vundle plugin for vim and then open vim and install the other bundles.
 
 Key Mappings
 ------------
@@ -29,14 +29,16 @@ Tab/Split Keys
 Vundle
 --------
 
-* `\bi` - `:BundleInstall`
-* `\bu` - `:BundleInstall!` (Install & Update)
-* `\bc` - `:BundleClean`
+* `\bi` - `:BundleInstall` - will install any new bundles
+* `\bu` - `:BundleInstall!`- will install any new bundles and update existing (slower)
+* `\bc` - `:BundleClean` - remove any bundles that aren't in your .vimrc
 
 Misc
 -------
 
 * `\ev` - Edit .vimrc
+* `\n` - toggle line numbers
+* `\r` - toggle relative line numbers (0 starts at your cursors and counts outward from there handy for block operations)
 * `jj` - `Esc` alias
 
 Stock Plugins
@@ -59,7 +61,7 @@ Stock Plugins
 * [Syntastic](https://github.com/scrooloose/syntastic) - Adds smart parenthesis/brackets and a few other syntax tweaks to your files
 * [Xdebug](https://github.com/ludovicPelle/vim-xdebug) - Allows for proper debugging php scripts
 * [Html Annoyance](https://github.com/tudorprodan/html_annoyance.vim) - Fixes a few annoyances when editing HTML, paricularly the underline of anchor tages when they span multiple lines
-* [JavaScript Syntax](https://github.com/jelera/vim-javascript-syntax) - Adds a few syntax tweaks to javascript files
+* [JavaScript Syntax](https://github.com/ehynds/vim-javascript-syntax) - Adds a few syntax tweaks to javascript files
 * [Node](https://github.com/guileen/vim-node) - Adds node keywords to javascript files
 * [Nodejs Complete](https://github.com/myhere/vim-nodejs-complete) - Adds better omnicomplete support for node js files
 * [Ack](https://github.com/mileszs/ack.vim) - Allows ack-grepping from inside vim
