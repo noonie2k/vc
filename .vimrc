@@ -114,7 +114,6 @@ set complete=.,w,b,u,U,]
 
 " Handy <ESC>
 inoremap jj <ESC>
-inoremap <esc> <nop>
 noremap <F1> <ESC>
 inoremap <F1> <ESC>
 
