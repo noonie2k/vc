@@ -258,6 +258,9 @@ let FILEA=expand('~/sql.vim')
 if filereadable(FILEA) | exe "source " . FILEA | endif
 nnoremap <leader><F5> :DBExecRangeSQL<CR>
 let g:dbext_default_buffer_lines = 40
+
+" snipmate
+let g:snippets_dir='~/.vim/bundle/snipmate-snippets/'
 "}}}
 
 "{{{ Abbreviations 
