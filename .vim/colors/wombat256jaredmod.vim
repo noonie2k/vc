@@ -34,6 +34,7 @@ hi LineNr		ctermfg=241		ctermbg=233		cterm=none		guifg=#857b6f	guibg=#080808	gui
 hi SpecialKey	ctermfg=241		ctermbg=none	cterm=none		guifg=#626262	guibg=#2b2b2b	gui=none
 hi WarningMsg	ctermfg=203										guifg=#ff5f55
 hi ErrorMsg		ctermfg=196		ctermbg=236		cterm=bold		guifg=#ff2026	guibg=#3a3a3a	gui=bold
+hi javaScriptFunction      ctermfg=202     ctermbg=none    cterm=bold
 
 " Vim >= 7.0 specific colors
 if version >= 700
