@@ -9,7 +9,7 @@ call vundle#rc()
 Bundle 'git://github.com/gmarik/vundle.git'
 
 Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+"Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/scrooloose/snipmate-snippets.git'
@@ -26,14 +26,17 @@ Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/scrooloose/syntastic.git'
 "Bundle 'git://github.com/ludovicPelle/vim-xdebug.git'
 Bundle 'git://github.com/tudorprodan/html_annoyance.vim.git'
-"Bundle 'git://github.com/ehynds/vim-javascript-syntax.git'
+Bundle 'git://github.com/ehynds/vim-javascript-syntax.git'
 Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
 Bundle 'git://github.com/guileen/vim-node.git'
 Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 "Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/flazz/vim-colorschemes.git'
-Bundle 'https://github.com/jinfield/vim-nginx'
+Bundle 'git://github.com/jinfield/vim-nginx'
+Bundle 'git://github.com/mattn/emmet-vim'
+Bundle 'git://github.com/bling/vim-airline.git'
+Bundle 'git://github.com/kien/ctrlp.vim.git'
 
 filetype plugin indent on
 
@@ -62,7 +65,7 @@ set encoding=utf-8  " Set font encoding
 set termencoding=utf-8
 set fileencoding=utf-8
 
-let g:Powerline_symbols='fancy'
+"let g:Powerline_symbols='fancy'
 "}}}
 "{{{ Behaviours
 syntax enable       " Enable syntax highlighting
@@ -98,6 +101,7 @@ set hlsearch        " Highlight matches
 " Ignore for following file types when using wildmenu
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.git,.hg,.bzr,.sass-cache,*.class,htdocs/framework/**,public/images/**,public/audio/**,public/docs/**,public/software/**,public/flash/**
 set tags=./tags,tags; " Set ctags in current directory and then up
+map <silent> <cr> :nohlsearch<cr>
 "}}}
 "{{{ Visual
 set showmatch       " Show matching brackets
@@ -139,14 +143,14 @@ nmap j gj
 nmap k gk
 
 " Disable arrow keys
-inoremap <up> <nop>
-inoremap <left> <nop>
-inoremap <down> <nop>
-inoremap <right> <nop>
-noremap <up> <nop>
-noremap <left> <nop>
-noremap <down> <nop>
-noremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <left> <nop>
+" inoremap <down> <nop>
+" inoremap <right> <nop>
+" noremap <up> <nop>
+" noremap <left> <nop>
+" noremap <down> <nop>
+" noremap <right> <nop>
 
 " Split movement
 nmap <silent> <C-h> :wincmd h<cr>
