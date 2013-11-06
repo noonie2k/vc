@@ -1,0 +1,1 @@
+/home/istock/vc/.vim
