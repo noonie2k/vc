@@ -270,6 +270,9 @@ let g:dbext_default_buffer_lines = 40
 
 " snipmate
 let g:snippets_dir='~/.vim/bundle/snipmate-snippets/'
+
+" ctrlp
+let g:ctrlp_max_files=25000
 "}}}
 
 "{{{ Abbreviations 
