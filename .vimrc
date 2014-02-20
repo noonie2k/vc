@@ -47,6 +47,8 @@ augroup filetype_phtml
     au BufNewFile,BufRead *.smtp set filetype=phtml
 augroup END
 
+au FileType ruby setl sw=2 sts=2 ts=2 et
+
 "}}}
 "{{{ Color Scheme
 set t_Co=256
