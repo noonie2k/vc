@@ -38,6 +38,7 @@ Bundle 'git://github.com/bling/vim-airline.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tpope/vim-unimpaired.git'
 Bundle 'git://github.com/puppetlabs/puppet-syntax-vim.git'
+Bundle 'git://github.com/jakar/vim-json.git'
 
 filetype plugin indent on
 
