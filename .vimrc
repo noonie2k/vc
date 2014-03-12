@@ -39,6 +39,7 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tpope/vim-unimpaired.git'
 Bundle 'git://github.com/puppetlabs/puppet-syntax-vim.git'
 Bundle 'git://github.com/jakar/vim-json.git'
+Bundle 'git://github.com/joonty/vdebug.git'
 
 filetype plugin indent on
 
@@ -272,7 +273,13 @@ let g:dbext_default_buffer_lines = 40
 let g:snippets_dir='~/.vim/bundle/snipmate-snippets/'
 
 " ctrlp
-let g:ctrlp_max_files=25000
+let g:ctrlp_max_files=35000
+"}}}
+
+"{{{ Shortcuts
+
+" PHP Require Once (place cursor over class)
+nnoremap <leader>o yiwO<ESC>pV:s/^Service_/services_/g<HOME>silent! <CR>V:s/_/\//g<CR>Irequire_once '<END>.php';<ESC>:nohlsearch<CR>=j
 "}}}
 
 "{{{ Abbreviations 
